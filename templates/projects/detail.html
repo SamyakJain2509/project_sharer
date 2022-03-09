@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ project.name }}</h1>
+    <p>
+        <small class="text-muted">{{ project.submitted }}</small>
+        by
+        {{ project.developer }}
+    </p>
+    <br>
+    <p class="lead">
+        {{ project.description }}
+    </p>
+    <p>
+        <a href="{{ project.project_file.url }}" download> Download project </a> 
+    </p>
+{% endblock %}
